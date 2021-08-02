@@ -102,3 +102,17 @@ function getPorjById(projId) {
 }
 
 
+function openModal() {
+    document.querySelector('.modal').style.display = 'block';
+}
+
+
+function onSubmit() {
+    
+    var elEmail = (document.querySelector('[name=email]').value)
+    var elSubject = (document.querySelector('[name=subject]').value)
+    var elMessage = (document.querySelector('[name=message]').value)
+    window.location.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${elEmail}&su=${elSubject}&body=${elMessage}`
+}
+
+
