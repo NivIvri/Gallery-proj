@@ -71,7 +71,7 @@ var strHTML = projlist.map(function (proj) {
      <i class="fa fa-plus fa-3x"></i>
      </div>
      </div>
-     <img class="img-fluid" src="img/portfolio/0${proj.id}-thumbnail.jpg" >
+     <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" >
      </a>
      <div class="portfolio-caption">
      <h4>${proj.name}</h4>
@@ -88,6 +88,7 @@ function renderModal(projId) {
     document.querySelector('.modal-body h2').innerText = currProj.name
     document.querySelector('p.item-intro').innerText = currProj.title
     document.querySelector('p.desc').innerText = currProj.desc
+    var a = document.querySelector('p.url').innerHTML = ` <a href="${currProj.url}">link to the game</a>`
     document.querySelector('.img-model').innerHTML = `<img class="img-fluid d-block mx-auto" src="img/portfolio/0${currProj.id}-full.jpg" alt="">`
 }
 
@@ -99,4 +100,5 @@ function getPorjById(projId) {
     })
     return proj
 }
+
 
